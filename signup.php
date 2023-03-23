@@ -1,8 +1,6 @@
 <?php
 require 'config.php';
-if(!empty($_SESSION["id"])){
-	header("Location: index.php");
-  }
+
   if(isset($_POST["submitsignup"])){
 	$email = $_POST["emailsignup"];
 	$password = $_POST["passwordsignup"];
@@ -58,6 +56,7 @@ if(isset($_POST["submit"])){
     if($password == $confirmation){
         $query = "INSERT INTO adherent (firstname_adherent, lastname_adherent, n_cin, telephone , email , `pswd_adh` ) VALUES('$name','$lastname','$n_cin', '$phone' ,'$email' , '$password')";
         mysqli_query($conn, $query);
+		$_SESSION["name"]=$name;
       echo
       header("Location: index.php");
 	  echo

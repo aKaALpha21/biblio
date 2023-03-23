@@ -45,7 +45,7 @@ require 'config.php'
                         </ul>
                     </li>
                 </ul>
-                <a class="btn btn-outline-dark mt-auto" href="#"><i class="fa-solid fa-user">profile</i></a>
+                <a class="btn btn-outline-dark mt-auto"onclick="getProfile()" href="profile.php"><i class="fa-solid fa-user">profile</i></a>
                 </div>
             </div>
         </div>
